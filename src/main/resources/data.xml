@@ -1,0 +1,56 @@
+<Tariffs>
+    <Tariff>
+        <Id>1</Id>
+        <Name>name</Name>
+        <OperatorName>operator</OperatorName>
+        <Payroll>3.15</Payroll>
+        <CallPrices>
+            <SameOperator>1.22</SameOperator>
+            <AnotherOperator>3.22</AnotherOperator>
+            <LandlinePhone>5.22</LandlinePhone>
+        </CallPrices>
+        <SmsPrice>0.22</SmsPrice>
+    </Tariff>
+    <Tariff>
+        <Id>2</Id>
+        <Name>second name</Name>
+        <OperatorName>second operator</OperatorName>
+        <Payroll>2.66</Payroll>
+        <CallPrices>
+            <SameOperator>1.33</SameOperator>
+            <AnotherOperator>3.66</AnotherOperator>
+            <LandlinePhone>5.99</LandlinePhone>
+        </CallPrices>
+        <SmsPrice>0.29</SmsPrice>
+    </Tariff>
+    <TariffWithInternet>
+        <Id>3</Id>
+        <Name>third name</Name>
+        <OperatorName>third operator</OperatorName>
+        <Payroll>2.14</Payroll>
+        <CallPrices>
+            <SameOperator>0.99</SameOperator>
+            <AnotherOperator>1.22</AnotherOperator>
+            <LandlinePhone>3.22</LandlinePhone>
+        </CallPrices>
+        <SmsPrice>0.12</SmsPrice>
+        <TrafficInMegabyte>500</TrafficInMegabyte>
+        <PriceForOneMegabyte>0.15</PriceForOneMegabyte>
+        <IsModemModeEnabled>false</IsModemModeEnabled>
+    </TariffWithInternet>
+    <TariffWithInternet>
+        <Id>4</Id>
+        <Name>fourth name</Name>
+        <OperatorName>fourth operator</OperatorName>
+        <Payroll>6.17</Payroll>
+        <CallPrices>
+            <SameOperator>0.00</SameOperator>
+            <AnotherOperator>0.50</AnotherOperator>
+            <LandlinePhone>3.22</LandlinePhone>
+        </CallPrices>
+        <SmsPrice>0.17</SmsPrice>
+        <TrafficInMegabyte>15000</TrafficInMegabyte>
+        <PriceForOneMegabyte>0.10</PriceForOneMegabyte>
+        <IsModemModeEnabled>true</IsModemModeEnabled>
+    </TariffWithInternet>
+</Tariffs>

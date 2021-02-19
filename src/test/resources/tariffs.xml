@@ -1,0 +1,16 @@
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/tariffs"
+         xsi:schemaLocation="http://www.example.com/tariffs tariffs.xsd">
+    <tariff>
+        <id>1</id>
+        <name>name</name>
+        <operator-name>operator</operator-name>
+        <payroll>3.15</payroll>
+        <sms-price>0.22</sms-price>
+        <call-prices>
+            <same-operator>1.22</same-operator>
+            <another-operator>3.22</another-operator>
+            <landline-phones>5.22</landline-phones>
+        </call-prices>
+    </tariff>
+</tariffs>

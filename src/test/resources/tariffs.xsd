@@ -1,0 +1,42 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/tariffs"
+        xmlns:tns="http://www.example.com/tariffs" elementFormDefault="qualified">
+    <element name="tariff" type="tns:Tariff"/>
+    <element name="tariff-with-internet" type="tns:TariffWithInternet" substitutionGroup="tns:tariff"/>
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element name="tariff" type="tns:Tariff" minOccurs="1" maxOccurs="unbounded"/>
+                <element name="tariff-with-internet" type="tns:TariffWithInternet" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="CallPrices">
+        <sequence>
+            <element name="same-operator" type="float"/>
+            <element name="another-operator" type="float"/>
+            <element name="landline-phones" type="float"/>
+        </sequence>
+    </complexType>
+    <complexType name="Tariff">
+        <sequence>
+            <element name="id" type="integer"/>
+            <element name="name" type="string"/>
+            <element name="operator-name" type="string"/>
+            <element name="payroll" type="float"/>
+            <element name="sms-price" type="float"/>
+            <element name="call-prices" type="tns:CallPrices"/>
+        </sequence>
+    </complexType>
+    <complexType name="TariffWithInternet">
+        <complexContent>
+            <extension base="tns:Tariff">
+               <sequence>
+                   <element name="traffic-in-megabyte" type="float"/>
+                   <element name="price-for-one-megabyte" type="float"/>
+                   <element name="is-modem-mode-enabled" type="boolean"/>
+               </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>
